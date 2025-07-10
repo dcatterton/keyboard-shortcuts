@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.forge.tylertech.com/v1/libs/@tylertech/forge@3.9.2/forge-core.css" />
+  <link rel="stylesheet" href="https://cdn.forge.tylertech.com/v1/libs/@tylertech/forge@3.9.2/theme/forge-theme.css" />
+  <link rel="stylesheet"
+    href="https://cdn.forge.tylertech.com/v1/libs/@tylertech/forge@3.9.2/typography/forge-typography.css" />
+  <link rel="stylesheet" href="https://cdn.forge.tylertech.com/v1/libs/@tylertech/forge@3.9.2/forge.css" />
+  <script type="module" src="https://cdn.forge.tylertech.com/v1/libs/@tylertech/forge@3.9.2/index.js"></script>
+  <link rel="stylesheet" href="https://cdn.forge.tylertech.com/v1/css/tyler-font.css" />
+  <link rel="stylesheet" href="../../../shared.css" />
+</head>
+
+<body>
+  <forge-scaffold class="scaffold-example" viewport>
+    <div slot="header">
+      <forge-app-bar title-text="eFile & Serve Review Queue" theme-mode="scoped" theme="white">
+        <forge-app-bar-menu-button slot="start"></forge-app-bar-menu-button>
+        <forge-icon slot="logo" external external-type="custom" name="tyler_talking_t_logo"></forge-icon>
+        <forge-app-bar-help-button slot="end"></forge-app-bar-help-button>
+        <forge-app-bar-notification-button slot="end"></forge-app-bar-notification-button>
+        <forge-app-bar-app-launcher-button slot="end" allow-more="true"></forge-app-bar-app-launcher-button>
+        <forge-app-bar-profile-button slot="end" avatar-text="First Last" full-name="First Last"
+          email="first.last@tylertech.com"></forge-app-bar-profile-button>
+      </forge-app-bar>
+      <forge-toolbar>
+        <div slot="start">
+          <p class="forge-typography--heading3">Review queue</p>
+        </div>
+        <div slot="end">
+          <forge-button id="keyboard-shortcuts-btn">
+            <forge-icon external external-type="extended" name="keyboard"></forge-icon>
+            <span>Keyboard shortcuts</span>
+          </forge-button>
+        </div>
+      </forge-toolbar>
+    </div>
+
+    <div slot="body-left">
+      <forge-drawer slot="body-left">
+    
+        <forge-toolbar slot="header">
+          <div>Filters</div>
+        </forge-toolbar>
+      
+        <aside>
+          <div class="filter-right-drawer">
+          <forge-text-field label-position="block-start">
+            <label>Envelope number</label>
+            <input type="text" placeholder="Search...">
+          </forge-text-field>
+          <forge-text-field label-position="block-start" style="margin-bottom: 1rem;">
+            <label>Case number</label>
+            <input type="text" placeholder="Search...">
+          </forge-text-field>
+          <forge-divider></forge-divider>
+
+          <forge-expansion-panel class="filter-expansion-panel">
+            <div slot="header" role="button" tabindex="0" style="display: flex; justify-content: space-between;">
+              <div class="filter-title">Date range</div>
+              <forge-open-icon></forge-open-icon>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus ut illum corporis incidunt quod
+              temporibus consequatur rem! Libero rem
+              nulla quod corporis similique consequuntur facere laborum veniam error eius.
+            </p>
+          </forge-expansion-panel>
+          <forge-divider></forge-divider>
+          <forge-expansion-panel class="filter-expansion-panel">
+            <div slot="header" role="button" tabindex="0" style="display: flex; justify-content: space-between;">
+              <div class="filter-title">Queues</div>
+              <forge-open-icon></forge-open-icon>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus ut illum corporis incidunt quod
+              temporibus consequatur rem! Libero rem
+              nulla quod corporis similique consequuntur facere laborum veniam error eius.
+            </p>
+          </forge-expansion-panel>
+          <forge-divider></forge-divider>
+          <forge-expansion-panel class="filter-expansion-panel">
+            <div slot="header" role="button" tabindex="0" style="display: flex; justify-content: space-between;">
+              <div class="filter-title">Filing codes</div>
+              <forge-open-icon></forge-open-icon>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus ut illum corporis incidunt quod
+              temporibus consequatur rem! Libero rem
+              nulla quod corporis similique consequuntur facere laborum veniam error eius.
+            </p>
+          </forge-expansion-panel>
+          <forge-divider></forge-divider>
+          <forge-expansion-panel class="filter-expansion-panel">
+            <div slot="header" role="button" tabindex="0" style="display: flex; justify-content: space-between;">
+              <div class="filter-title">Case types</div>
+              <forge-open-icon></forge-open-icon>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus ut illum corporis incidunt quod
+              temporibus consequatur rem! Libero rem
+              nulla quod corporis similique consequuntur facere laborum veniam error eius.
+            </p>
+          </forge-expansion-panel>
+          <forge-divider></forge-divider>
+          <forge-expansion-panel class="filter-expansion-panel">
+            <div slot="header" role="button" tabindex="0" style="display: flex; justify-content: space-between;">
+              <div class="filter-title">Locations</div>
+              <forge-open-icon></forge-open-icon>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus ut illum corporis incidunt quod
+              temporibus consequatur rem! Libero rem
+              nulla quod corporis similique consequuntur facere laborum veniam error eius.
+            </p>
+          </forge-expansion-panel>
+          <forge-divider></forge-divider>
+          <forge-expansion-panel class="filter-expansion-panel">
+            <div slot="header" role="button" tabindex="0" style="display: flex; justify-content: space-between;">
+              <div class="filter-title">Organizations</div>
+              <forge-open-icon></forge-open-icon>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus ut illum corporis incidunt quod
+              temporibus consequatur rem! Libero rem
+              nulla quod corporis similique consequuntur facere laborum veniam error eius.
+            </p>
+          </forge-expansion-panel>
+          <forge-divider></forge-divider>
+        </aside>
+        
+        <forge-toolbar slot="footer" auto-height>
+          <div class="filter-right-drawer-footer" >
+            <forge-checkbox checked>Show deferred</forge-checkbox>
+            <forge-checkbox>Auto-refresh</forge-checkbox>
+            <div style="display: flex; gap: 1rem; margin-top: 1rem; margin-bottom: 1rem;">
+              <forge-button variant="outlined" full-width="true">Reset</forge-button>
+              <forge-button variant="filled" full-width="true">Apply</forge-button>
+            </div>
+          </div>
+        </forge-toolbar>
+      
+      </forge-drawer>
+    </div>
+    <div slot="body">
+      <div class="body-container">
+        <forge-card style="--forge-card-padding: 0px; --forge-card-shape: 0px; --forge-card-height: 100%;">
+          <div class="table-container">
+            <div class="table-container-header" style="display: flex; justify-content: space-between; align-items: center;">
+              <p class="forge-typography--heading4" style="margin: 1rem 0;">Envelopes received</p>
+              <forge-icon external external-type="extended" name="dots_vertical"></forge-icon>
+            </div>
+            <script type="module">
+              const columns = [
+                'Priority', 'Envelope #', 'Case #', 'Submit date', 'Location', 'Status', 'Filing code', 'Filing description', 'Case type', 'Filed by', 'Reviewer', 'Lock'
+              ];
+              // Generate 20 rows of sample data
+              const data = Array.from({ length: 20 }, (_, i) => ({
+                priority: 'flag',
+                envelope: String(i + 1).padStart(6, '0'),
+                case: 'CC-00-0000',
+                submitDate: '00/00/0000\n0:00 PM CDT',
+                location: 'Location name',
+                status: i % 5 === 2 ? 'Error' : (i % 3 === 0 ? 'Under review' : 'Submitted'),
+                filingCode: 'Addendum',
+                filingDescription: i === 0 ? 'Short description' : 'Longer filing descr...',
+                caseType: 'Adult criminal',
+                filedBy: 'Filer Name',
+                reviewer: 'Reviewer Name',
+                lock: true
+              }));
+              const statusStyles = {
+                'Submitted': { color: '#1976d2', bg: '#e3f2fd' },
+                'Under review': { color: '#8A6804', bg: '#fffde7' },
+                'Error': { color: '#d32f2f', bg: '#ffebee' }
+              };
+              const table = document.createElement('table');
+              table.className = 'forge-data-table';
+              table.style.width = '100%';
+              table.style.borderCollapse = 'collapse';
+              // Header
+              const thead = document.createElement('thead');
+              const headerRow = document.createElement('tr');
+              columns.forEach(col => {
+                const th = document.createElement('th');
+                th.textContent = col;
+                headerRow.appendChild(th);
+              });
+              thead.appendChild(headerRow);
+              table.appendChild(thead);
+              // Body
+              const tbody = document.createElement('tbody');
+              data.forEach(row => {
+                const tr = document.createElement('tr');
+                // Priority (icon)
+                let td = document.createElement('td');
+                const flagIcon = document.createElement('forge-icon');
+                flagIcon.setAttribute('external', '');
+                flagIcon.setAttribute('external-type', 'extended');
+                flagIcon.setAttribute('name', 'flag');
+                flagIcon.style.color = '#d32f2f';
+                tr.appendChild(td);
+                td.appendChild(flagIcon);
+                // Envelope # (link)
+                td = document.createElement('td');
+                const a = document.createElement('a');
+                a.href = '#';
+                a.textContent = row.envelope;
+                td.appendChild(a);
+                tr.appendChild(td);
+                // Case #
+                td = document.createElement('td');
+                td.textContent = row.case;
+                tr.appendChild(td);
+                // Submit date
+                td = document.createElement('td');
+                td.innerHTML = row.submitDate.replace('\n', '<br>');
+                tr.appendChild(td);
+                // Location
+                td = document.createElement('td');
+                td.textContent = row.location;
+                tr.appendChild(td);
+                // Status (badge)
+                td = document.createElement('td');
+                const span = document.createElement('span');
+                const style = statusStyles[row.status] || statusStyles['Submitted'];
+                span.style.display = 'inline-block';
+                span.style.padding = '2px 12px';
+                span.style.borderRadius = '12px';
+                span.style.fontSize = '12px';
+                span.style.fontWeight = '500';
+                span.style.background = style.bg;
+                span.style.color = style.color;
+                span.textContent = row.status;
+                td.appendChild(span);
+                tr.appendChild(td);
+                // Filing code
+                td = document.createElement('td');
+                td.textContent = row.filingCode;
+                tr.appendChild(td);
+                // Filing description
+                td = document.createElement('td');
+                td.textContent = row.filingDescription;
+                tr.appendChild(td);
+                // Case type
+                td = document.createElement('td');
+                td.textContent = row.caseType;
+                tr.appendChild(td);
+                // Filed by
+                td = document.createElement('td');
+                td.textContent = row.filedBy;
+                tr.appendChild(td);
+                // Reviewer
+                td = document.createElement('td');
+                td.textContent = row.reviewer;
+                tr.appendChild(td);
+                // Lock (icon)
+                td = document.createElement('td');
+                const lockIcon = document.createElement('forge-icon');
+                lockIcon.setAttribute('external', '');
+                lockIcon.setAttribute('external-type', 'extended');
+                lockIcon.setAttribute('name', 'lock');
+                td.appendChild(lockIcon);
+                tr.appendChild(td);
+                tbody.appendChild(tr);
+              });
+              table.appendChild(tbody);
+              document.querySelector('.table-container').appendChild(table);
+
+              // Forge paginator
+              const paginator = document.createElement('forge-paginator');
+              paginator.setAttribute('total', '20');
+              paginator.setAttribute('page-size', '20');
+              paginator.setAttribute('label', 'Rows per page:');
+              paginator.style.display = 'flex';
+              paginator.style.justifyContent = 'flex-end';
+              paginator.style.marginTop = '8px';
+              document.querySelector('.table-container').appendChild(paginator);
+            </script>
+
+          </div>
+        </forge-card>
+      </div>
+    </div>
+  </forge-scaffold>
+  <!-- Keyboard Shortcuts Right Sheet Dialog -->
+  <forge-dialog id="shortcuts-dialog" preset="right-sheet" label="Keyboard Shortcuts">
+    <forge-scaffold>
+      <forge-toolbar slot="header">
+        <h1 class="forge-typography--heading4" style="margin:0;" slot="start">Review queue keyboard shortcuts</h1>
+        <forge-icon-button slot="after-end" aria-label="Close dialog" id="close-shortcuts-dialog">
+          <forge-icon external external-type="extended" name="close"></forge-icon>
+        </forge-icon-button>
+      </forge-toolbar>
+      <div slot="body" style="padding: 1.5rem;">
+        <forge-text-field>
+          <label>Search for a shortcut</label>
+          <forge-icon external external-type="standard" name="search" slot="end"></forge-icon>
+          <input type="text" id="shortcut-search-input">
+        </forge-text-field>
+        <div class="shortcuts-list">
+          <div class="shortcut-item" style="margin-bottom: 1rem;">
+            <div class="shortcut-item-description">Show / hide shortcuts panel</div>
+            <div class="shortcut-item-keys">
+              <div class="key-badge"><p class="forge-typography--body1">shift</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">?</p></div>
+            </div>
+          </div>
+          <forge-divider></forge-divider>
+          <p class="forge-typography--heading3" style="margin-top: 1rem; margin-bottom: 0;">Filter shortcuts</p>
+          <div class="shortcut-item">
+            <div class="shortcut-item-description">Select envelope # filter</div>
+            <div class="shortcut-item-keys">
+              <div class="key-badge"><p class="forge-typography--body1">alt</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">shift</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">e</p></div>
+            </div>
+          </div>
+          <div class="shortcut-item">
+            <div class="shortcut-item-description">Select bulk # filter</div>
+            <div class="shortcut-item-keys">
+              <div class="key-badge"><p class="forge-typography--body1">alt</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">shift</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">b</p></div>
+            </div>
+          </div>
+          <div class="shortcut-item">
+            <div class="shortcut-item-description">Select queues # filter</div>
+            <div class="shortcut-item-keys">
+              <div class="key-badge"><p class="forge-typography--body1">alt</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">shift</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">q</p></div>
+            </div>
+          </div>
+          <div class="shortcut-item">
+            <div class="shortcut-item-description">Select case types # filter</div>
+            <div class="shortcut-item-keys">
+              <div class="key-badge"><p class="forge-typography--body1">alt</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">shift</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">t</p></div>
+            </div>
+          </div>
+          <div class="shortcut-item">
+            <div class="shortcut-item-description">Select organizations # filter</div>
+            <div class="shortcut-item-keys">
+              <div class="key-badge"><p class="forge-typography--body1">alt</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">shift</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">o</p></div>
+            </div>
+          </div>
+          <div class="shortcut-item">
+            <div class="shortcut-item-description">Select case # filter</div>
+            <div class="shortcut-item-keys">
+              <div class="key-badge"><p class="forge-typography--body1">alt</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">shift</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">c</p></div>
+            </div>
+          </div>
+          <div class="shortcut-item">
+            <div class="shortcut-item-description">Select date range # filter</div>
+            <div class="shortcut-item-keys">
+              <div class="key-badge"><p class="forge-typography--body1">alt</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">shift</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">d</p></div>
+            </div>
+          </div>
+          <div class="shortcut-item">
+            <div class="shortcut-item-description">Select filing codes filter</div>
+            <div class="shortcut-item-keys">
+              <div class="key-badge"><p class="forge-typography--body1">alt</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">shift</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">i</p></div>
+            </div>
+          </div>
+          <div class="shortcut-item">
+            <div class="shortcut-item-description">Select locations filter</div>
+            <div class="shortcut-item-keys">
+              <div class="key-badge"><p class="forge-typography--body1">alt</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">shift</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">l</p></div>
+            </div>
+          </div>
+          <div class="shortcut-item">
+            <div class="shortcut-item-description">Apply filters</div>
+            <div class="shortcut-item-keys">
+              <div class="key-badge"><p class="forge-typography--body1">alt</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">shift</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">a</p></div>
+            </div>
+          </div>
+          <div class="shortcut-item">
+            <div class="shortcut-item-description">Abort filter changes</div>
+            <div class="shortcut-item-keys">
+              <div class="key-badge"><p class="forge-typography--body1">alt</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">shift</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">x</p></div>
+            </div>
+          </div>
+          <div class="shortcut-item" style="margin-bottom: 1rem;">
+            <div class="shortcut-item-description">Reset all filters</div>
+            <div class="shortcut-item-keys">
+              <div class="key-badge"><p class="forge-typography--body1">alt</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">shift</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">r</p></div>
+            </div>
+          </div>
+          <forge-divider></forge-divider>
+          <p class="forge-typography--heading3" style="margin-top: 1rem; margin-bottom: 0;">Queue navigation</p>
+          <div class="shortcut-item">
+            <div class="shortcut-item-description">Go to next page</div>
+            <div class="shortcut-item-keys">
+              <div class="key-badge"><p class="forge-typography--body1">alt</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">shift</p></div>
+              <div class="key-badge"><forge-icon external external-type="standard" name="arrow_forward"></forge-icon></div>
+            </div>
+          </div>
+          <div class="shortcut-item">
+            <div class="shortcut-item-description">Go back to prior page</div>
+            <div class="shortcut-item-keys">
+              <div class="key-badge"><p class="forge-typography--body1">alt</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">shift</p></div>
+              <div class="key-badge"><forge-icon external external-type="standard" name="arrow_back"></forge-icon></div>
+            </div>
+          </div>
+          <div class="shortcut-item">
+            <div class="shortcut-item-description">Go to first page</div>
+            <div class="shortcut-item-keys">
+              <div class="key-badge"><p class="forge-typography--body1">alt</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">shift</p></div>
+              <div class="key-badge"><forge-icon external external-type="standard" name="arrow_downward"></forge-icon></div>
+            </div>
+          </div>
+          <div class="shortcut-item">
+            <div class="shortcut-item-description">Go to last page</div>
+            <div class="shortcut-item-keys">
+              <div class="key-badge"><p class="forge-typography--body1">alt</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">shift</p></div>
+              <div class="key-badge"><forge-icon external external-type="extended" name="arrow_up"></forge-icon></div>
+            </div>
+          </div>
+          <div class="shortcut-item">
+            <div class="shortcut-item-description">Show visible table columns</div>
+            <div class="shortcut-item-keys">
+              <div class="key-badge"><p class="forge-typography--body1">alt</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">shift</p></div>
+              <div class="key-badge"><p class="forge-typography--body1">m</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <forge-toolbar slot="footer" inverted class="footer-toolbar">
+        <forge-button id="print-cheatsheet-btn" variant="flat" full-width="true" slot="center">
+          <forge-icon external external-type="standard" name="print" slot="start"></forge-icon>
+          Print cheatsheet</forge-button>
+      </forge-toolbar>
+    </forge-scaffold>
+  </forge-dialog>
+
+  <script type="module">
+    // Find the Keyboard shortcuts button by icon name
+    const openBtn = Array.from(document.querySelectorAll('forge-button')).find(btn =>
+      btn.querySelector('forge-icon[name="keyboard"]')
+    );
+    const dialog = document.getElementById('shortcuts-dialog');
+    const closeBtn = document.getElementById('close-shortcuts-dialog');
+
+    if (openBtn && dialog) {
+      openBtn.addEventListener('click', () => {
+        dialog.open = true;
+      });
+    }
+    if (closeBtn && dialog) {
+      closeBtn.addEventListener('click', () => {
+        dialog.open = false;
+      });
+    }
+
+    document.addEventListener('keydown', (event) => {
+      // Shift + ? is Shift + /
+      if (event.shiftKey && event.key === '?') {
+        const dialog = document.getElementById('shortcuts-dialog');
+        if (dialog) {
+          dialog.open = !dialog.open; // Toggle open/close
+          event.preventDefault();
+        }
+      }
+    });
+
+    const shortcutSearchInput = document.getElementById('shortcut-search-input');
+    const shortcutItems = Array.from(document.querySelectorAll('.shortcuts-list .shortcut-item'));
+
+    if (shortcutSearchInput) {
+      shortcutSearchInput.addEventListener('input', (event) => {
+        const value = event.target.value.trim().toLowerCase();
+        shortcutItems.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          item.style.display = text.includes(value) ? '' : 'none';
+        });
+
+        const shortcutsList = document.querySelector('.shortcuts-list');
+        if (shortcutsList) {
+          const children = Array.from(shortcutsList.children);
+
+          // If search is empty, show all dividers and section headers
+          if (!value) {
+            children.forEach(el => {
+              if (
+                el.tagName === 'FORGE-DIVIDER' ||
+                (el.tagName === 'P' && el.classList.contains('forge-typography--heading3'))
+              ) {
+                el.style.display = '';
+              }
+            });
+            return;
+          }
+
+          // Otherwise, hide dividers and section headers if no visible shortcut-item follows them
+          let showSection = false;
+          for (let i = children.length - 1; i >= 0; i--) {
+            const el = children[i];
+            if (el.classList && el.classList.contains('shortcut-item')) {
+              if (el.style.display !== 'none') {
+                showSection = true;
+              }
+            }
+            if (
+              el.tagName === 'FORGE-DIVIDER' ||
+              (el.tagName === 'P' && el.classList.contains('forge-typography--heading3'))
+            ) {
+              el.style.display = showSection ? '' : 'none';
+              showSection = false;
+            }
+          }
+        }
+      });
+    }
+
+    const printBtn = document.getElementById('print-cheatsheet-btn');
+    if (printBtn) {
+      printBtn.addEventListener('click', () => {
+        // Open the PDF in a new window and trigger print
+        const pdfWindow = window.open('cheatsheet.pdf', '_blank');
+        if (pdfWindow) {
+          // Wait for the PDF to load, then print
+          pdfWindow.onload = function () {
+            pdfWindow.focus();
+            pdfWindow.print();
+          };
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+.filter-right-drawer {
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+
+}
+
+.table-container {
+    padding: 1rem;
+}
+
+.body-container {
+    padding-left: 1rem;
+}
+
+forge-divider {
+    --forge-divider-margin: -1rem;
+}
+
+.filter-expansion-panel {
+    padding: 1rem 0;
+}
+
+.filter-title {
+    color: var(--forge-theme-text-medium);
+    font-size: 14px;
+}
+
+.shortcuts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.shortcut-item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    gap: 5rem;
+    justify-content: space-between;
+}
+
+.shortcut-item-keys {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.shortcut-item-keys forge-icon {
+    --forge-icon-size: 18px;
+}
+
+.key-badge {
+    background-color: var(--forge-theme-surface-container-low);
+    padding: 0.5rem 0.35rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+}
+
+.key-badge p {
+    margin: 0;
+}
+
+.footer-toolbar {
+    box-shadow: var(--forge-elevation-10);
+}
+
+#shortcuts-dialog {
+    --forge-dialog-width: 550px;
+}
