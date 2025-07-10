@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <forge-scaffold class="scaffold-example" viewport>
+  <forge-scaffold class="scaffold-example" viewport="true">
     <div slot="header">
       <forge-app-bar title-text="eFile & Serve Review Queue" theme-mode="scoped" theme="white">
         <forge-app-bar-menu-button slot="start"></forge-app-bar-menu-button>
@@ -42,114 +42,116 @@
     </div>
 
     <div slot="body-left">
-      <forge-drawer slot="body-left">
+    <forge-drawer>
     
-        <forge-toolbar slot="header">
-          <div>Filters</div>
-        </forge-toolbar>
-      
-        <aside>
-          <div class="filter-right-drawer">
-          <forge-text-field label-position="block-start">
-            <label>Envelope number</label>
-            <input type="text" placeholder="Search...">
-          </forge-text-field>
-          <forge-text-field label-position="block-start" style="margin-bottom: 1rem;">
-            <label>Case number</label>
-            <input type="text" placeholder="Search...">
-          </forge-text-field>
-          <forge-divider></forge-divider>
+      <forge-toolbar slot="header">
+        <div>Filters</div>
+      </forge-toolbar>
+    
+      <aside>
+        <div class="filter-right-drawer">
+        <forge-text-field label-position="block-start">
+          <label>Envelope number</label>
+          <input type="text" placeholder="Search...">
+        </forge-text-field>
+        <forge-text-field label-position="block-start" style="margin-bottom: 1rem;">
+          <label>Case number</label>
+          <input type="text" placeholder="Search...">
+        </forge-text-field>
+        <forge-divider></forge-divider>
 
-          <forge-expansion-panel class="filter-expansion-panel">
-            <div slot="header" role="button" tabindex="0" style="display: flex; justify-content: space-between;">
-              <div class="filter-title">Date range</div>
-              <forge-open-icon></forge-open-icon>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus ut illum corporis incidunt quod
-              temporibus consequatur rem! Libero rem
-              nulla quod corporis similique consequuntur facere laborum veniam error eius.
-            </p>
-          </forge-expansion-panel>
-          <forge-divider></forge-divider>
-          <forge-expansion-panel class="filter-expansion-panel">
-            <div slot="header" role="button" tabindex="0" style="display: flex; justify-content: space-between;">
-              <div class="filter-title">Queues</div>
-              <forge-open-icon></forge-open-icon>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus ut illum corporis incidunt quod
-              temporibus consequatur rem! Libero rem
-              nulla quod corporis similique consequuntur facere laborum veniam error eius.
-            </p>
-          </forge-expansion-panel>
-          <forge-divider></forge-divider>
-          <forge-expansion-panel class="filter-expansion-panel">
-            <div slot="header" role="button" tabindex="0" style="display: flex; justify-content: space-between;">
-              <div class="filter-title">Filing codes</div>
-              <forge-open-icon></forge-open-icon>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus ut illum corporis incidunt quod
-              temporibus consequatur rem! Libero rem
-              nulla quod corporis similique consequuntur facere laborum veniam error eius.
-            </p>
-          </forge-expansion-panel>
-          <forge-divider></forge-divider>
-          <forge-expansion-panel class="filter-expansion-panel">
-            <div slot="header" role="button" tabindex="0" style="display: flex; justify-content: space-between;">
-              <div class="filter-title">Case types</div>
-              <forge-open-icon></forge-open-icon>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus ut illum corporis incidunt quod
-              temporibus consequatur rem! Libero rem
-              nulla quod corporis similique consequuntur facere laborum veniam error eius.
-            </p>
-          </forge-expansion-panel>
-          <forge-divider></forge-divider>
-          <forge-expansion-panel class="filter-expansion-panel">
-            <div slot="header" role="button" tabindex="0" style="display: flex; justify-content: space-between;">
-              <div class="filter-title">Locations</div>
-              <forge-open-icon></forge-open-icon>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus ut illum corporis incidunt quod
-              temporibus consequatur rem! Libero rem
-              nulla quod corporis similique consequuntur facere laborum veniam error eius.
-            </p>
-          </forge-expansion-panel>
-          <forge-divider></forge-divider>
-          <forge-expansion-panel class="filter-expansion-panel">
-            <div slot="header" role="button" tabindex="0" style="display: flex; justify-content: space-between;">
-              <div class="filter-title">Organizations</div>
-              <forge-open-icon></forge-open-icon>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus ut illum corporis incidunt quod
-              temporibus consequatur rem! Libero rem
-              nulla quod corporis similique consequuntur facere laborum veniam error eius.
-            </p>
-          </forge-expansion-panel>
-          <forge-divider></forge-divider>
-        </aside>
-        
-        <forge-toolbar slot="footer" auto-height>
-          <div class="filter-right-drawer-footer" >
-            <forge-checkbox checked>Show deferred</forge-checkbox>
-            <forge-checkbox>Auto-refresh</forge-checkbox>
-            <div style="display: flex; gap: 1rem; margin-top: 1rem; margin-bottom: 1rem;">
-              <forge-button variant="outlined" full-width="true">Reset</forge-button>
-              <forge-button variant="filled" full-width="true">Apply</forge-button>
-            </div>
+        <forge-expansion-panel class="filter-expansion-panel">
+          <div slot="header" role="button" tabindex="0" style="display: flex; justify-content: space-between;">
+            <div class="filter-title">Date range</div>
+            <forge-open-icon></forge-open-icon>
           </div>
-        </forge-toolbar>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus ut illum corporis incidunt quod
+            temporibus consequatur rem! Libero rem
+            nulla quod corporis similique consequuntur facere laborum veniam error eius.
+          </p>
+        </forge-expansion-panel>
+        <forge-divider></forge-divider>
+        <forge-expansion-panel class="filter-expansion-panel">
+          <div slot="header" role="button" tabindex="0" style="display: flex; justify-content: space-between;">
+            <div class="filter-title">Queues</div>
+            <forge-open-icon></forge-open-icon>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus ut illum corporis incidunt quod
+            temporibus consequatur rem! Libero rem
+            nulla quod corporis similique consequuntur facere laborum veniam error eius.
+          </p>
+        </forge-expansion-panel>
+        <forge-divider></forge-divider>
+        <forge-expansion-panel class="filter-expansion-panel">
+          <div slot="header" role="button" tabindex="0" style="display: flex; justify-content: space-between;">
+            <div class="filter-title">Filing codes</div>
+            <forge-open-icon></forge-open-icon>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus ut illum corporis incidunt quod
+            temporibus consequatur rem! Libero rem
+            nulla quod corporis similique consequuntur facere laborum veniam error eius.
+          </p>
+        </forge-expansion-panel>
+        <forge-divider></forge-divider>
+        <forge-expansion-panel class="filter-expansion-panel">
+          <div slot="header" role="button" tabindex="0" style="display: flex; justify-content: space-between;">
+            <div class="filter-title">Case types</div>
+            <forge-open-icon></forge-open-icon>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus ut illum corporis incidunt quod
+            temporibus consequatur rem! Libero rem
+            nulla quod corporis similique consequuntur facere laborum veniam error eius.
+          </p>
+        </forge-expansion-panel>
+        <forge-divider></forge-divider>
+        <forge-expansion-panel class="filter-expansion-panel">
+          <div slot="header" role="button" tabindex="0" style="display: flex; justify-content: space-between;">
+            <div class="filter-title">Locations</div>
+            <forge-open-icon></forge-open-icon>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus ut illum corporis incidunt quod
+            temporibus consequatur rem! Libero rem
+            nulla quod corporis similique consequuntur facere laborum veniam error eius.
+          </p>
+        </forge-expansion-panel>
+        <forge-divider></forge-divider>
+        <forge-expansion-panel class="filter-expansion-panel">
+          <div slot="header" role="button" tabindex="0" style="display: flex; justify-content: space-between;">
+            <div class="filter-title">Organizations</div>
+            <forge-open-icon></forge-open-icon>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis minus ut illum corporis incidunt quod
+            temporibus consequatur rem! Libero rem
+            nulla quod corporis similique consequuntur facere laborum veniam error eius.
+          </p>
+        </forge-expansion-panel>
+        <forge-divider></forge-divider>
+      </aside>
       
-      </forge-drawer>
-    </div>
+      <forge-toolbar slot="footer" auto-height>
+        <div class="filter-right-drawer-footer" >
+          <forge-checkbox checked>Show deferred</forge-checkbox>
+          <forge-checkbox>Auto-refresh</forge-checkbox>
+          <div style="display: flex; gap: 1rem; margin-top: 1rem; margin-bottom: 1rem;">
+            <forge-button variant="outlined" full-width="true">Reset</forge-button>
+            <forge-button variant="filled" full-width="true">Apply</forge-button>
+          </div>
+        </div>
+      </forge-toolbar>
+    
+    </forge-drawer>
+  </div>
+
     <div slot="body">
+      
       <div class="body-container">
-        <forge-card style="--forge-card-padding: 0px; --forge-card-shape: 0px; --forge-card-height: 100%;">
+        <forge-card style="--forge-card-padding: 0px; --forge-card-shape: 0px;">
           <div class="table-container">
             <div class="table-container-header" style="display: flex; justify-content: space-between; align-items: center;">
               <p class="forge-typography--heading4" style="margin: 1rem 0;">Envelopes received</p>
@@ -298,9 +300,9 @@
         </forge-icon-button>
       </forge-toolbar>
       <div slot="body" style="padding: 1.5rem;">
-        <forge-text-field>
+        <forge-text-field show-clear>
+          <forge-icon external external-type="standard" name="search" slot="start"></forge-icon>
           <label>Search for a shortcut</label>
-          <forge-icon external external-type="standard" name="search" slot="end"></forge-icon>
           <input type="text" id="shortcut-search-input">
         </forge-text-field>
         <div class="shortcuts-list">
@@ -469,14 +471,26 @@
     const dialog = document.getElementById('shortcuts-dialog');
     const closeBtn = document.getElementById('close-shortcuts-dialog');
 
+    // Add scroll lock when dialog opens, remove when closes
+    if (dialog) {
+      dialog.addEventListener('forge-dialog-open', () => {
+        document.body.classList.add('body-scroll-lock');
+      });
+      dialog.addEventListener('forge-dialog-close', () => {
+        document.body.classList.remove('body-scroll-lock');
+      });
+    }
+
     if (openBtn && dialog) {
       openBtn.addEventListener('click', () => {
         dialog.open = true;
+        document.body.classList.add('body-scroll-lock');
       });
     }
     if (closeBtn && dialog) {
       closeBtn.addEventListener('click', () => {
         dialog.open = false;
+        document.body.classList.remove('body-scroll-lock');
       });
     }
 
@@ -486,6 +500,11 @@
         const dialog = document.getElementById('shortcuts-dialog');
         if (dialog) {
           dialog.open = !dialog.open; // Toggle open/close
+          if (dialog.open) {
+            document.body.classList.add('body-scroll-lock');
+          } else {
+            document.body.classList.remove('body-scroll-lock');
+          }
           event.preventDefault();
         }
       }
