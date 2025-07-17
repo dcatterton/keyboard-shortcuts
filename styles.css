@@ -70,7 +70,8 @@ forge-divider {
 
 .shortcut-item-keys {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.25rem;
+    align-items: center;
 }
 
 .shortcut-item-keys forge-icon {
@@ -89,6 +90,16 @@ forge-divider {
 
 .key-badge p {
     margin: 0;
+}
+
+.key-separator {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+    color: var(--forge-theme-on-surface-variant);
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .footer-toolbar {
